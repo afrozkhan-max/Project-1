@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#160f2d">
-  <title>Hi, Tablu ✨</title>
+  <title>Hi, Tabbu ✨</title>
   <style>
     :root { color-scheme: dark; --ink:#fff8f2; --muted:#d6c9e8; --pink:#ff8dc7; --peach:#ffbd91; }
     * { box-sizing: border-box; }
@@ -12,6 +12,9 @@
     body::before, body::after { content:""; position:fixed; width:38vmax; aspect-ratio:1; border-radius:50%; filter:blur(90px); opacity:.25; pointer-events:none; animation:drift 13s ease-in-out infinite alternate; background:#e969b6; top:-22vmax; left:-12vmax; }
     body::after { background:#846eff; top:auto; left:auto; bottom:-25vmax; right:-12vmax; animation-delay:-6s; }
     .stars { position:fixed; inset:0; pointer-events:none; background-image:radial-gradient(1px 1px at 8% 23%,#fff 60%,transparent),radial-gradient(1px 1px at 77% 18%,#fff 60%,transparent),radial-gradient(1.5px 1.5px at 89% 61%,#fff 60%,transparent),radial-gradient(1px 1px at 21% 82%,#fff 60%,transparent),radial-gradient(1px 1px at 63% 91%,#fff 60%,transparent),radial-gradient(1px 1px at 44% 10%,#fff 60%,transparent); opacity:.6; }
+    .site-nav { position:fixed; z-index:2; top:1.4rem; left:50%; transform:translateX(-50%); display:flex; gap:.35rem; padding:.4rem; border:1px solid rgba(255,255,255,.17); border-radius:99px; background:rgba(24,15,42,.48); backdrop-filter:blur(14px); }
+    .site-nav a { padding:.65rem 1rem; border-radius:99px; color:#e8dcef; text-decoration:none; font-size:.88rem; transition:background .2s,color .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color:#fff; background:rgba(255,255,255,.15); }
     .card { position:relative; width:min(90vw,680px); padding:clamp(2.5rem,8vw,5.5rem) clamp(1.6rem,7vw,4.5rem); text-align:center; border:1px solid rgba(255,255,255,.2); border-radius:32px; background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045)); box-shadow:0 32px 100px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.22); backdrop-filter:blur(18px); animation:arrive 1.1s cubic-bezier(.2,.8,.2,1) both; }
     .eyebrow { display:inline-flex; align-items:center; gap:.55rem; margin:0 0 1.4rem; padding:.55rem .95rem; border:1px solid rgba(255,255,255,.2); border-radius:99px; color:#ffe0ef; background:rgba(255,255,255,.08); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; }
     .sparkle { color:#ffd394; animation:twinkle 2s ease-in-out infinite; }
@@ -34,6 +37,7 @@
   <div class="stars" aria-hidden="true"></div>
   <span class="orb o1" aria-hidden="true">✦</span><span class="orb o2" aria-hidden="true">✧</span>
   <span class="orb o3" aria-hidden="true">✦</span><span class="orb o4" aria-hidden="true">✧</span>
+  <nav class="site-nav" aria-label="Main navigation"><a href="Hi Tabbu.html" aria-current="page">Home</a><a href="About.html">About</a><a href="Contact.html">Contact</a></nav>
   <main class="card">
     <p class="eyebrow"><span class="sparkle">✦</span> a little hello <span class="sparkle">✦</span></p>
     <h1>Hi, Tabbu!</h1>
@@ -43,3 +47,5 @@
   </main>
 </body>
 </html>
+
+
