@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#160f2d">
-  <title>Contact us · Tabbu ✨</title>
+  <title>Gallery · Tabbu ✨</title>
   <style>
     :root { color-scheme: dark; --ink:#fff8f2; --muted:#d6c9e8; --pink:#ff8dc7; --peach:#ffbd91; }
     * { box-sizing:border-box; }
@@ -24,7 +24,17 @@
     .note { margin:1.7rem auto 0; padding:1rem 1.15rem; max-width:34rem; border:1px solid rgba(255,255,255,.12); border-radius:18px; background:rgba(255,255,255,.055); color:#f6ddea; line-height:1.7; }
     .contact-link { display:inline-flex; margin-top:1.6rem; padding:.85rem 1.25rem; border-radius:99px; color:#28162d; background:linear-gradient(110deg,#ffd5e9,#ffc59c); text-decoration:none; font-weight:700; box-shadow:0 8px 28px rgba(255,141,199,.2); transition:transform .2s,box-shadow .2s; }
     .contact-link:hover { transform:translateY(-2px); box-shadow:0 12px 34px rgba(255,141,199,.3); }
-    .signoff { margin:1.7rem 0 0; color:#f7dfed; font-size:.95rem; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin:2rem auto 0; text-align:left; }
+    .gallery-tile { min-height:180px; padding:1.25rem; border:1px solid rgba(255,255,255,.17); border-radius:22px; background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045)); transition:transform .25s,border-color .25s; }
+    .gallery-tile:hover { transform:translateY(-5px); border-color:rgba(255,255,255,.36); }
+    .tile-icon { display:block; margin-bottom:.75rem; font-size:2rem; }
+    .gallery-tile h2 { margin:0 0 .4rem; color:#fff4fa; font-size:1.05rem; }
+    .gallery-tile p { margin:0; color:var(--muted); font-size:.94rem; line-height:1.6; }
+    .tile-sun { background:linear-gradient(145deg,rgba(255,189,145,.19),rgba(255,255,255,.045)); }
+    .tile-bloom { background:linear-gradient(145deg,rgba(255,141,199,.18),rgba(255,255,255,.045)); }
+    .tile-sky { background:linear-gradient(145deg,rgba(143,164,255,.19),rgba(255,255,255,.045)); }
+    .tile-spark { background:linear-gradient(145deg,rgba(220,168,255,.18),rgba(255,255,255,.045)); }
+    @media (max-width:560px) { .gallery-grid { grid-template-columns:1fr; } }    .signoff { margin:1.7rem 0 0; color:#f7dfed; font-size:.95rem; }
     .heart { color:#ff91bd; }
     @keyframes arrive { from { opacity:0; transform:translateY(24px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
     @keyframes drift { to { transform:translate(20vmax,16vmax) scale(1.2); } }
@@ -34,16 +44,24 @@
 </head>
 <body>
   <div class="stars" aria-hidden="true"></div>
-  <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="About.html">About</a><a href="Gallery.html">Gallery</a><a href="Contact.html" aria-current="page">Contact</a></nav>
+  <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="About.html">About</a><a href="Gallery.html" aria-current="page">Gallery</a><a href="Contact.html">Contact</a></nav>
   <main class="card">
-    <p class="eyebrow"><span class="sparkle">✦</span> the door is always open <span class="sparkle">✦</span></p>
-    <h1>Say hello</h1>
+    <p class="eyebrow"><span class="sparkle">✦</span> little moments & pretty things <span class="sparkle">✦</span></p>
+    <h1>Gallery</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="copy">Have a thought, a kind note, or just want to say hi? I would love to hear from you.</p><a class="contact-link" href="mailto:hello@example.com">Send a little hello&nbsp; ↗</a><p class="note">Tap the button to open your email app and write a message.</p>
+    <p class="copy">A small collection of lovely little things to brighten your day. Pick a card and enjoy the view. ✨</p>
+    <section class="gallery-grid" aria-label="A collection of cheerful moments">
+      <article class="gallery-tile tile-sun"><span class="tile-icon" aria-hidden="true">☀️</span><h2>Golden glow</h2><p>A little sunshine, just for you.</p></article>
+      <article class="gallery-tile tile-bloom"><span class="tile-icon" aria-hidden="true">🌸</span><h2>Soft blooms</h2><p>Room to grow at your own pace.</p></article>
+      <article class="gallery-tile tile-sky"><span class="tile-icon" aria-hidden="true">☁️</span><h2>Cloud nine</h2><p>Make space for daydreams.</p></article>
+      <article class="gallery-tile tile-spark"><span class="tile-icon" aria-hidden="true">✨</span><h2>Little magic</h2><p>There is wonder in the small things.</p></article>
+    </section>
     <p class="signoff">Made with a little joy <span class="heart">♥</span></p>
   </main>
 </body>
 </html>
+
+
 
 
 
